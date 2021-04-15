@@ -1,0 +1,44 @@
+{% load static %}
+
+<html lang="pt/br">
+<head>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>Publicação blog</title>
+
+</head>
+<body>
+<form name="publication" action="publication_done" method="post">
+<div class="background">
+  <div class="container">
+    <div class="screen">
+      <div class="screen-header">
+        <div class="screen-header-left">
+          <div class="screen-header-button close"></div>
+          <div class="screen-header-button maximize"></div>
+          <div class="screen-header-button minimize"></div>
+        </div>
+        <div class="screen-header-right">
+          <div class="screen-header-ellipsis"></div>
+          <div class="screen-header-ellipsis"></div>
+          <div class="screen-header-ellipsis"></div>
+        </div>
+      </div>
+      <div class="screen-body">
+        <div class="screen-body-item left">
+          <div class="app-title">
+            <span>{{title}} Enviada com Sucesso!</span>
+            <span>blogGroger</span>
+          </div>
+        </div>
+    </div>
+    <div class="credits">
+      <p>
+          inspired by
+          <a class="credits-link" href="https://github.com/g-roger" target="_blank">GRoger Enterprises</a>
+      </p>
+    </div>
+  </div>
+</div>
+</form>
+</body>
+</html>
