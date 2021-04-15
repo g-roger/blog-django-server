@@ -1,14 +1,12 @@
 from django.contrib import admin
-from blog.models import Author, Publication
-
-
-class AuthorAdmin(admin.ModelAdmin):
-    pass
+from blog.models import Publication
 
 
 class PublicationAdmin(admin.ModelAdmin):
-    pass
+    date_hierarchy = 'publication_date'
+    list_display = ('title', 'author', 'publication_date')
+    list_filter = ('title', 'author')
+    search_fields = ('title', 'author')
 
 
-admin.site.register(Author, AuthorAdmin)
 admin.site.register(Publication, PublicationAdmin)
